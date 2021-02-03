@@ -1,0 +1,5 @@
+[mymac]
+mac1 ansible_host=127.0.0.1 ansible_connection=local ansible_python_interpreter=/usr/local/bin/python3
+
+[webserver]
+web1 ansible_host=127.0.0.1 ansible_python_interpreter=/usr/local/bin/python3
