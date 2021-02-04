@@ -1,8 +1,3 @@
-# VENV
-
-python -m venv venv
-source venv/bin/activate
-
 # ping target host from command line
 
 ansible all -m ping
@@ -22,3 +17,9 @@ ansible-playbook site.yaml
 # finally ansible playbook to run nginx
 
 ansible-playbook nginx.yaml
+
+
+# VENV 
+
+python -m venv venv
+source venv/bin/activate

@@ -9,7 +9,7 @@
 
   tasks:
     - name: Install the nginx package
-      apt: pkg=nginx state=installed update_cache=true
+      #apt: pkg=nginx state=installed update_cache=true
       yum: 
         name: nginx 
         state: present
