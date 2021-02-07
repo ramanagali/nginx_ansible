@@ -1,35 +1,8 @@
 ---
-- name: run task on all hosts
+- name: run task on mymac
   hosts: mymac
   #become: yes
-
-  vars:
-    var1: foo
-    var2: bar
-
-  tasks:
-    - name: Install the nginx package
-      #apt: pkg=nginx state=installed update_cache=true
-      yum: 
-        name: nginx 
-        state: present
-      
-    - name: Create web root directory
-      file: 
-        path: /var/www/html
-        state: directory
-        mode: 0755
-
-    - name: Copy index.html file
-      copy:
-        src: index.html
-        dest: /var/www/html/index.html
-        owner: root
-        group: root
-        mode: 0644
-    
-    - name: Start the nginx service
-      systemd: 
-        name: nginx 
-        state: started
-        enabled: yes
+  roles:
+    - intall
+    - configure
+    - runservice

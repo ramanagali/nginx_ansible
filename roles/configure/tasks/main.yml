@@ -1,0 +1,15 @@
+---
+# tasks file for configure
+- name: Create web root directory
+  file:
+    path: /var/www/html
+    state: directory
+    mode: 0755
+
+- name: Copy index.html file
+  copy:
+    src: index.html
+    dest: /var/www/html/index.html
+    owner: root
+    group: root
+    mode: 0644

@@ -1,0 +1,7 @@
+---
+# tasks file for runservice
+- name: Start the nginx service
+  systemd:
+    name: nginx
+    state: started
+    enabled: yes
