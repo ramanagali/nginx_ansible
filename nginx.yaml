@@ -3,6 +3,5 @@
   hosts: mymac
   #become: yes
   roles:
-    - intall
     - configure
     - runservice

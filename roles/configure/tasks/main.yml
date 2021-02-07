@@ -1,5 +1,24 @@
 ---
 # tasks file for configure
+
+- name: Display all variables/facts known for a host
+  debug:
+    msg: "System {{ inventory_hostname }}"
+
+- name: Distribution
+  debug:
+    msg: "{{ ansible_distribution }}"
+
+- name: Install the nginx package
+  apt:
+    pkg: nginx
+    state: present
+    update_cache: true
+#   yum:
+#     name: nginx
+#     state: present
+#     become: yes
+
 - name: Create web root directory
   file:
     path: /var/www/html

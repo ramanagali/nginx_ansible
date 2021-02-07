@@ -1,20 +1,16 @@
-# ping target host from command line
+# ping target hosts
 
 ansible all -m ping
 
-# examples to run playbook
+# examples to run/test playbook
 
 ansible-playbook -i inv/hosts ping.yaml --check --ask-pass
-
-# ansible playbook test run
-
 ansible-playbook ping.yaml --check
 
 # ---------------------------------
 
 # Create Ansible Roles
 
-ansible-galaxy init install
 ansible-galaxy init configure
 ansible-galaxy init runservice
 
@@ -25,5 +21,5 @@ ansible-playbook site.yaml
 
 # VENV
 
-python -m venv venv
+python3 -m venv venv
 source venv/bin/activate
