@@ -4,6 +4,7 @@ ansible all -m ping
 
 # examples to run/test playbook
 
+ansible-playbook -i inv/hosts ping.yaml --check
 ansible-playbook -i inv/hosts ping.yaml --check --ask-pass
 ansible-playbook ping.yaml --check
 
